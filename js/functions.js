@@ -1,13 +1,16 @@
+/* Shortcut code for get elements by ID */
 function getId(id){
     return document.getElementById(id);
 }
 
+/* Append nodes to results panel */
 function preppend(elem) {
     var result = getId('results');
     result.insertBefore(elem, result.childNodes[2]);
     getId("without-results").style.display = 'none';
 }
 
+/* Get value of a Radio Input checked */
 function getRadioValue(name) {
     var radios = document.getElementsByName(name);
 
@@ -19,7 +22,7 @@ function getRadioValue(name) {
 
     return false;
 }
-
+/* Show Notification Alert */
 function showMessage(msg, type) {
     reset();
     alertify.set({ delay: 3000 });
@@ -32,7 +35,7 @@ function showMessage(msg, type) {
     }
     return false;
 }
-
+/* Hide and Show Panels */
 getId('up').addEventListener('click', function() {
     getId('up').style.display = 'none';
     getId('down').style.display = 'block';
@@ -56,7 +59,7 @@ getId('r-down').addEventListener('click', function() {
     getId('r-down').style.display = 'none';
     getId('results').style.display = 'block';
 });
-
+/* Function taken from alertify doc */
 function reset () {
     $("#toggleCSS").attr("href", "alertify/themes/alertify.default.css");
     alertify.set({
