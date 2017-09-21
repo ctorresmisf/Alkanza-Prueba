@@ -78,6 +78,6 @@ results.on('child_added', function(snap) {
 results.on('child_changed', function(snap) {
     var entity = snap.val();
     var element = document.createElement('article');
-    element.innerHTML = '<b>' + entity.user + '<span> has chosen: </span> </b> <i>' + entity.answer + '</i>';
+    element.innerHTML = '<b>' + entity.user + '<span> has changed his/her character for: </span> </b> <i>' + entity.answer + '</i>';
     preppend(element);
 });
