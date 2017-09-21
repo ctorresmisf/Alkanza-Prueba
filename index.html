@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prueba Alkanza Christian Torres</title>
+    <link rel="stylesheet" href="alertify/themes/alertify.core.css" />
+    <link rel="stylesheet" href="alertify/themes/alertify.default.css" id="toggleCSS" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="alertify/lib/alertify.min.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <img src="images/ace-logo.png" alt="Alkanza">
+            <img src="images/login.png" alt="Login" width="50" height="50" id="usericon">
+            <img src="images/logout.png" alt="Logout" width="50" height="50" id="logouticon">
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <span id="b-title"></span>
+                    <span class="glyphicon glyphicon-plus-sign" id="down"></span>
+                    <span class="glyphicon glyphicon-minus-sign" id="up"></span>
+                </div>
+                <div class="panel-body" id="poll-body">
+                    <p class="description" id="poll-desc"></p>
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-6" id="img1">
+                            </div>
+                            <div class="col-xs-6" id="img2">
+                            </div>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-danger btn-lg" id="vote">VOTE</button>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span>Results App</span>
+                    <span class="glyphicon glyphicon-plus-sign" id="r-down"></span>
+                    <span class="glyphicon glyphicon-minus-sign" id="r-up"></span>
+                </div>
+                <div class="panel-body" id="results">
+                    <article id="without-results">
+                        No answers...
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="message"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBA9MiriynU4KH_cOZn_cJF8HGOb1f0zIk",
+            authDomain: "alkanza-pr.firebaseapp.com",
+            databaseURL: "https://alkanza-pr.firebaseio.com",
+            projectId: "alkanza-pr",
+            storageBucket: "alkanza-pr.appspot.com",
+            messagingSenderId: "991127473756"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/functions.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/database.js"></script>
+
+</body>
+
+</html>
